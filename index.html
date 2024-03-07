@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>virtualWallet</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="banner">
+        <img src="storage/img/banner.svg">
+    </div>
     <header class="header">
         <div class="header__logo">
-            <div class="logo__icono"><img src="storage/img/logo.svg" alt=""></div>
+            <div class="logo__icono">
+                <img src="storage/img/Frame2.png">
+            </div>
             <div class="logo__titulo">invento</div>
         </div>
-        <div class="header__menu"><img src="storage/img/menu.svg"></div>
+        <div class="header__menu">
+            <i class='bx bx-menu'></i>
+        </div>
     </header>
-    <main>
+    <main class="main">
         <section class="main__titulo">
             <article class="titulo__card">
-                <h2>hi, arthur</h2>
-                <p>here's your balance.</p>
+                <h2>Hi, Arthur!</h2>
+                <p>here’s your balance.</p>
             </article>
             <article class="titulo__balance">
                 <div class="balance__one">
@@ -33,27 +41,81 @@
                 </div>
             </article>
         </section>
-        
-        <section class="main_actividades">
-            <h2 class="titulo-actividades">Activities</h2>
-            <div class="tresimg">
-                <img class="account" src="storage/img/account.svg">
-                <small>account</small>
-                <img class="privacy" src="storage/img/privacy.svg">
-                <small>account</small>
-                <img class="help" src="storage/img/help.svg">
-                <small>account</small>
-            </div>
-            <h2 class="transactions">transactions</h2>
-            <div class="transacciones">
-                <div class="up">
-                    <img>
-                    <h2>Food & Beverage</h2><h2>+28.11</h2>
-                    
+        <section class="main__activities">
+            <article class="activities__service">
+                <h3>activities</h3>
+                <div class="service__cards">
+                    <div class="service__cards__item_1">
+                        <i class='bx bxs-user-account'></i>
+                        <p>account</p>
+                    </div>
+                    <div class="service__cards__item_2">
+                        <i class='bx bxs-shield-plus' ></i>
+                        <p>privacy</p>
+                    </div>
+                    <div class="service__cards__item_3">
+                        <i class='bx bxs-help-circle' ></i>
+                        <p>help</p>
+                    </div>
                 </div>
-            </div>
-                
-            </div>
+            </article>
+            <article class="activities__transactions">
+                <h3>transactions</h3>
+                <div class="transactions__cards">
+                    <div class="transactions__cards__item">
+                        <div>
+                            <i class='bx bxs-up-arrow'></i>
+                            <div class="transactions__description">
+                                <p>food & beverage</p>
+                                <small>five lods</small>
+                            </div>
+                        </div>
+                        <div class="transactions__value">
+                            <p>+28.11</p>
+                            <small>feb 21</small>
+                        </div>
+                    </div>
+                    <div class="transactions__cards__item">
+                        <div>
+                            <i class='bx bxs-down-arrow'></i>
+                            <div class="transactions__description">
+                                <p>shopping</p>
+                                <small>h&m 1257 ****</small>
+                            </div>
+                        </div>
+                        <div class="transactions__value">
+                            <p>- 157.64</p>
+                            <small>jan 14</small>
+                        </div>
+                    </div>
+                    <div class="transactions__cards__item">
+                        <div>
+                            <i class='bx bxs-down-arrow'></i>
+                            <div class="transactions__description">
+                                <p>shopping</p>
+                                <small>h&m 1257 ****</small>
+                            </div>
+                        </div>
+                        <div class="transactions__value">
+                            <p>- 157.64</p>
+                            <small>jan 14</small>
+                        </div>
+                    </div>
+                    <div class="transactions__cards__item">
+                        <div>
+                            <i class='bx bxs-down-arrow'></i>
+                            <div class="transactions__description">
+                                <p>shopping</p>
+                                <small>h&m 1257 ****</small>
+                            </div>
+                        </div>
+                        <div class="transactions__value">
+                            <p>- 157.64</p>
+                            <small>jan 14</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">
