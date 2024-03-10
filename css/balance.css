@@ -55,17 +55,123 @@
     font-size: 3em;
     color: var(--color-primario);
 }
-/*creacion de la tercera pagina de la app*/
+/*creacion de la tercera pagina de la app-------------------------------------------------------------*/
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    padding: 0 .8em;
+    grid-template-areas: 
+    "totalbalance"
+    "totalbalance"
+    "totalbalance"
+    "options"
+    "grafica_balance"
+    "grafica_balance"
+    "grafica_balance"
+    "banner"
+    "banner";
+    grid-gap: 10px;
+}
+.main__title,
+.main__title2{
+    /* background: red; */
+    grid-area: investing;
+    margin-top: 1em;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-family: "SF-Pro-Text-Bold";
+    color: var(--color-primario);
+}
+.main__banner{
+    /* background: orange; */
+    height: 160px;
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    bottom: 0px;
+}
+.banner__public{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    /* background: red; */
+    border-radius: 15px;
+    box-shadow: 0 0 15px hsl(0, 100%, 48%);
+    grid-template-areas: 
+    "logo description";
+}
+.public__logo{
+    /* background: blue; */
+    /* border-bottom-right-radius: 100px; */
+    /* border-top-right-radius: 100px; */
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.public__logo div{
+    position: absolute;
+    /*background: var(--color-secundario); (necesario para el contorno de el fondo general)*/
+    opacity: .2;
+    z-index: -1;
+    right: 3px;
+    width: 700px;
+    height: 400px;
+    border-radius: 100%;
+}
+.public__logo img{
+    width: 70%;
+    /* height: 160px; */
+    padding: 10px;
+    object-fit: contain;
+}
+.public__description{
+    /* background: violet; */
+    grid-area: description;
+    text-align: center;
+}
+.public__description p{
+    font-family: "SF-Pro-Text-Bold";
+    font-size: 1.3em;
+    color: var(--color-primario);
+    margin-top: 20px;
+}
+.public__description small{
+    display: block;
+    font-family: "SF-Pro-Text-Regular";
+    font-size: 1em;
+    color: var(--color-cuarto);
+}
+
+.description__close{
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.description__close i {
+    /* background: red; */
+    border-radius: 100%;
+    padding: 5px;
+    background: var(--color-secundario);
+    color: var(--color-ternario);
+}
+
+.total_balance{
+    
+}
 
 
 
 
 
-
-
-
-
-/*limite de la segunda pagina*/
+/*limite de la segunda pagina--------------------------------------------------------------------------------*/
 .footer {
     width: 100%;
     background: var(--color-primario);
