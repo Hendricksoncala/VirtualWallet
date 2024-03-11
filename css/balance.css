@@ -3,11 +3,19 @@
 * {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
 
-
+.banner{
+    position: absolute;
+    z-index: -1;
+}
+.banner img{
+    width: 100%;
+    height: 105vh;
+    object-fit: cover;
+}
 .header {
     width: 100%;
     padding: 0 .5em;
@@ -18,10 +26,10 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    position: sticky;
+    position: fixed;
     z-index: 2;
     top: 0;
-    background: #33404F
+    /* background: var(--color-primario); */
 }
 
 .header__logo {
@@ -32,18 +40,19 @@
 
 }
 
-
+.logo__icono {
+    /* background: green; */
+}
 
 .logo__icono img {
     width: 3em;
 }
 
 .logo__titulo {
-    
-    color: white;
+    /* background: orange; */
+    color: var(--color-ternario);
     font-family: "SF-Pro-Text-Bold";
     text-transform: uppercase;
-
 }
 
 .header__menu {
@@ -52,133 +61,148 @@
 
 .header__menu i {
     font-size: 3em;
-    color: white;
+    color: var(--color-ternario);
 }
-/*creacion de la tercera pagina de la app-------------------------------------------------------------*/
 
-.main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
-    padding: 0 .8em;
-    grid-template-areas: 
-    "totalbalance"
-    "totalbalance"
-    "totalbalance"
-    "options"
-    "grafica_balance"
-    "grafica_balance"
-    "grafica_balance"
-    "banner"
-    "banner";
-    grid-gap: 10px;
-}
-.cards__item{
-    flex: 1;
-    min-width: 200px;
-    background: url(../storage/img/Ellipse\ 12.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.main__title,
-.main__title2{
+
+.balance{
     /* background: red; */
-    grid-area: investing;
-    margin-top: 1em;
-    font-size: 1.5em;
-    text-transform: capitalize;
-    font-family: "SF-Pro-Text-Bold";
-    color: var(--color-primario);
-}
-.main__banner{
-    /* background: orange; */
-    height: 170px;
-    grid-area: banner;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    bottom: 0px;
-    position: fixed;
-    bottom: 1;
     width: 100%;
-    background-color:#00dda248; /* Color de fondo del bloque inferior */
-    color: #fff; /* Color del texto del bloque inferior */
-    padding-bottom: 50px; /* Espaciado interno del bloque inferior */
-}
-.banner__public{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    background: rgba(0, 221, 162, 0);
-    grid-template-areas: 
-    "logo description";
-}
-.public__logo{
-    /* background: blue; */
-    /* border-bottom-right-radius: 100px; */
-    /* border-top-right-radius: 100px; */
-    grid-area: logo;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 32vh;
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+ 
 }
-.public__logo div{
+.balance__circle{
+    background: var(--color-primario);
+    width: 110%;
+    height: 53vh;
+    border-radius:100%;
     position: absolute;
-    /*background: var(--color-secundario); (necesario para el contorno de el fondo general)*/
-    opacity: .2;
-    z-index: -1;
-    right: 3px;
-    width: 700px;
-    height: 400px;
-    border-radius: 100%;
+    top: -460px;
+    left: -20px;
+    right: 0;
+    margin: 0 auto;
+    scale: 2;
 }
-.public__logo img{
-    width: 70%;
-    /* height: 160px; */
-    padding: 10px;
+.balance__circle div{
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: relative;
+    top: 100px;
+}
+
+.balance__total{
+    background: var(--color-secundario);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-ternario);
+    font-family: "SF-Pro-Text-Bold";
+    text-transform: capitalize;
+}
+.balance__total div{
+    /* background: red; */
+    margin-top: 65px;
+}
+
+.report{
+    width: 100%;
+    /* background: red; */
+    position: relative;
+    padding: 15px .8em;
+}
+.report__accounting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.report__accounting button{
+    background: var(--color-ternario);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-family: "SF-Pro-Text-Regular";
+    font-size: 1em;
+    border: 1px solid var( --color-cuarto);
+    color: var( --color-cuarto);;
+    text-transform: capitalize;
+}
+.report__accounting button:first-child{
+    background: var(--color-primario);
+    color: var(--color-ternario);
+}
+.report__accounting button:nth-child(2){
+    background: var(--color-ternario);
+    color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+.report__accounting button:last-child{
+    background: var(--color-ternario);
+}
+
+.report__week img{
+    /* background: red; */
+    width: 100%;
+    height: 25vh;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+
+
+
+.process{
+    background: var(--color-secundario-transparent);
+    height: 150px;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    padding: 0 0.8rem;
+}
+
+.process__card{
+    width: 100%;
+    /* background: violet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__image{
+    /* background: blue; */
+    flex: 1;
+}
+.card__image img{
+    width: 100%;
     object-fit: contain;
 }
-.public__description{
-    /* background: violet; */
-    grid-area: description;
-    text-align: center;
+.card__description{
+    /* background: olivedrab; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    flex: 2;
 }
-.public__description p{
-    font-family: "SF-Pro-Text-Bold";
-    font-size: 1.3em;
+.card__description div h3{
+    text-transform: capitalize;
     color: var(--color-primario);
-    margin-top: 20px;
-    display: flex;
-    justify-content:left;
-    
-
-
+    font-family: "SF-Pro-Text-Bold";
 }
-.public__description small{
-    display: block;
-    font-family: "SF-Pro-Text-Regular";
-    font-size: 0.7em;
+.card__description div p{
     color: var(--color-cuarto);
-    display: flex;
-    justify-content:left;
+    font-family: "SF-Pro-Text-Light";
 }
-
-.description__close{
-    width: 100%;
-    text-align: right;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-.description__close i {
+.process__close i {
     /* background: red; */
     border-radius: 100%;
     padding: 5px;
@@ -186,85 +210,15 @@
     color: var(--color-ternario);
 }
 
-.total_balance{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #00DDA3;
-    border-radius: 50%;
-    width: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
-    height: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
-    padding: 25px;
-    margin: auto;
-    color: white;
-    
-}
-
-.options{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
-
-    
-}
-.options button{
-    width: 10vh;
-    height: 4vh;
-    border-radius: 20vh;
-}
-.black{
-    background: #33404F;
-    color: white
-}
-.green{
-    background: white;
-    border-color: #00DDA3;
-    color: #00DDA3;
-}
-.white{
-    background: white;
-    color: #B5C5C3
-}
-
-.grafica_balance{
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
 
 
 
-/*limite de la segunda pagina--------------------------------------------------------------------------------*/
-.footer {
-    width: 100%;
-    background: var(--color-primario);
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-}
 
-.footer ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer ul li {
-    list-style: none;
-    margin: .5em 0;
-}
-
-.footer ul li a img {
-    width: 2em;
-}
 
 
 .footer {
     width: 100%;
+    height: 60px;
     background: var(--color-primario);
     position: fixed;
     bottom: 0;

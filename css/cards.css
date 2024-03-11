@@ -21,7 +21,8 @@
     position: sticky;
     z-index: 2;
     top: 0;
-    background: var(--color-ternario);
+    background: var(--color-primario);
+    
 }
 
 .header__logo {
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    
 
 }
 
@@ -42,7 +44,7 @@
 
 .logo__titulo {
     /* background: orange; */
-    color:  var(--color-primario);;
+    color:  white;
     font-family: "SF-Pro-Text-Bold";
     text-transform: uppercase;
 }
@@ -53,7 +55,7 @@
 
 .header__menu i {
     font-size: 3em;
-    color: var(--color-primario);
+    color: white;
 }
 
 
@@ -98,7 +100,7 @@
     grid-template-rows: 1fr;
     /* background: red; */
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.130);
+    box-shadow: 0 0 15px #e60a0a21;
     grid-template-areas: 
     "logo description";
 }
@@ -217,47 +219,6 @@
     bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-    width: 100%;
-    background: var(--color-primario);
-    position: fixed;
-    bottom: 0;
-    z-index: 10;
-}
-
-.footer ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer ul li {
-    list-style: none;
-    margin: .5em 0;
-}
-
-.footer ul li a img {
-    width: 2em;
-}
 
 
 
