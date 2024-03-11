@@ -21,7 +21,7 @@
     position: sticky;
     z-index: 2;
     top: 0;
-    background: var(--color-ternario);
+    background: #33404F
 }
 
 .header__logo {
@@ -32,19 +32,18 @@
 
 }
 
-.logo__icono {
-    /* background: green; */
-}
+
 
 .logo__icono img {
     width: 3em;
 }
 
 .logo__titulo {
-    /* background: orange; */
-    color:  var(--color-primario);;
+    
+    color: white;
     font-family: "SF-Pro-Text-Bold";
     text-transform: uppercase;
+
 }
 
 .header__menu {
@@ -53,7 +52,7 @@
 
 .header__menu i {
     font-size: 3em;
-    color: var(--color-primario);
+    color: white;
 }
 /*creacion de la tercera pagina de la app-------------------------------------------------------------*/
 
@@ -74,6 +73,19 @@
     "banner";
     grid-gap: 10px;
 }
+.cards__item{
+    flex: 1;
+    min-width: 200px;
+    background: url(../storage/img/Ellipse\ 12.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .main__title,
 .main__title2{
     /* background: red; */
@@ -92,12 +104,18 @@
     justify-content: center;
     align-items: end;
     bottom: 0px;
+    position: fixed;
+    bottom: 1;
+    width: 100%;
+    background-color:#00dda248; /* Color de fondo del bloque inferior */
+    color: #fff; /* Color del texto del bloque inferior */
+    padding-bottom: 50px; /* Espaciado interno del bloque inferior */
 }
 .banner__public{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    background: #00dda22f;
+    background: rgba(0, 221, 162, 0);
     grid-template-areas: 
     "logo description";
 }
@@ -139,12 +157,19 @@
     font-size: 1.3em;
     color: var(--color-primario);
     margin-top: 20px;
+    display: flex;
+    justify-content:left;
+    
+
+
 }
 .public__description small{
     display: block;
     font-family: "SF-Pro-Text-Regular";
     font-size: 0.7em;
     color: var(--color-cuarto);
+    display: flex;
+    justify-content:left;
 }
 
 .description__close{
@@ -168,9 +193,9 @@
     flex-direction: column;
     background-color: #00DDA3;
     border-radius: 50%;
-    width: 175px; /* Ajusta el tamaño del círculo según tus necesidades */
-    height: 175px; /* Ajusta el tamaño del círculo según tus necesidades */
-    padding: 30px;
+    width: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 150px; /* Ajusta el tamaño del círculo según tus necesidades */
+    padding: 25px;
     margin: auto;
     color: white;
     
