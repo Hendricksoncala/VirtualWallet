@@ -121,13 +121,13 @@ body{
 }
 
 .balance__one progress[value] {
-    --color: var(--color-secundario);
+    --color: #f3ba2f;
     --background: var(--color-ternario);
     background: var(--background);
 }
 
 .balance__two progress[value] {
-    --color: var(--color-cuarto);
+    --color: #f3ba2f;
     --background: var(--color-ternario);
     background: var(--background);
 }
@@ -160,7 +160,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .main__activities{
-    background: var(--color-ternario);
+    background: #f3ba2f;
     height: 100vh;
     padding: 1.5em 0.5em;
     border-top-left-radius: 20px;
@@ -169,6 +169,8 @@ progress[value]::-moz-progress-bar {
     flex-direction: column;
     gap: .5em;
 }
+
+
 .activities__service{
     /* background: blue; */
 }
@@ -196,7 +198,7 @@ progress[value]::-moz-progress-bar {
     min-height: 150px;
     border-radius: 20px;
     background: var(--color-ternario);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.150);
+    box-shadow: 0px 0px 20px rgba(254, 4, 4, 0.15);
     color: var(--color-primario);
     font-family: "SF-Pro-Text-Semibold";
     text-transform: capitalize;
@@ -205,17 +207,75 @@ progress[value]::-moz-progress-bar {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
 }
 .service__cards div i{
     font-size: 2.3em;
 }
-.service__cards__item_1, 
-.service__cards__item_2, 
-.service__cards__item_3{
-    /* background: darkmagenta; */
+.service__cards__item_1{
+    width: 200px; /* Ancho del contenedor */
+    text-align: center; /* Centrar el contenido horizontalmente */
+}
+.service__cards__item_1 img{
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    overflow: hidden; 
 }
 
+.service__cards__item_1 img {
+    width: 100%; 
+    height: auto; 
+}
+.service__cards__item_2{
+    width: 200px; 
+    text-align: center;
+}
+.service__cards__item_2 img{
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    overflow: hidden;
+}
 
+.service__cards__item_2 img {
+    width: 100%; 
+    height: auto; 
+}
+
+.service__cards__item_3 {
+    width: 200px; 
+    text-align: center; 
+}
+
+.service__cards__item_3 img{
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+
+.service__cards__item_3 img {
+    width: 100%; 
+    height: auto; 
+}
+.service__cards__item_4 {
+    width: 200px; 
+    text-align: center; 
+}
+
+.service__cards__item_4 img{
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+
+.service__cards__item_4 img {
+    width: 100%; 
+    height: auto; 
+}
 
 
 
@@ -262,7 +322,7 @@ div.transactions__value p{
 div.transactions__description small,
 div.transactions__value small{
     font-family: "SF-Pro-Text-Light";
-    color: var(--color-cuarto);
+    color: black
 }
 i.bx.bxs-up-arrow{
     color: var(--color-secundario);
