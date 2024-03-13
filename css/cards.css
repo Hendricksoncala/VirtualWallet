@@ -62,19 +62,17 @@
 .main{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
-    padding: 0 .8em;
+    grid-template-rows: max-content max-content max-content max-content max-content ;
+    padding: 0 0.8em;
     grid-template-areas: 
     "investing"
     "banner"
     "banner"
     "cards"
-    "colection"
-    "colection"
-    "colection"
-    "colection"
     "colection";
     grid-gap: 10px;
+    background: var();
+    height: 100%;
 }
 .main__title,
 .main__title2{
@@ -114,23 +112,23 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    
 }
 .public__logo div{
     position: absolute;
-    background: var(--color-secundario);
-    opacity: .2;
+    background: #f3ba2f;
+    opacity: .8;
     z-index: -1;
     right: 3px;
-    width: 700px;
-    height: 400px;
+    width: 1000px;
+    height: 600px;
     border-radius: 100%;
 }
 .public__logo img{
     width: 100%;
     /* height: 160px; */
-    padding: 10px;
     object-fit: contain;
+    width: 15vh;
 }
 .public__description{
     /* background: violet; */
@@ -140,7 +138,7 @@
 .public__description p{
     font-family: "SF-Pro-Text-Bold";
     font-size: 1.3em;
-    color: var(--color-primario);
+    color: #f3ba2f;
     margin-top: 20px;
 }
 .public__description small{
@@ -155,7 +153,7 @@
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 1em;
-    background: var(--color-secundario);
+    background: #f3ba2f;
     font-family: "SF-Pro-Text-Bold";
     text-transform: capitalize;
     color: var(--color-ternario);
@@ -170,17 +168,17 @@
     /* background: red; */
     border-radius: 100%;
     padding: 5px;
-    background: var(--color-secundario);
+    background: #f3ba2f;
     color: var(--color-ternario);
 }
 .main__title2{
     grid-area: cards;
 }
 .main__cards{
-    /* background: green; */
+
     grid-area: colection;
     display: flex;
-    gap: 10px;
+    gap: 0px;
     /* padding: 10px ; */
     flex-direction: row;
 

@@ -187,7 +187,6 @@ progress[value]::-moz-progress-bar {
     /* background: olivedrab; */
     display: flex;
     flex-direction: row;
-    justify-content: center;
     overflow-x: scroll;
     padding: 0.8em;
     gap: 15px;
@@ -218,15 +217,7 @@ progress[value]::-moz-progress-bar {
     text-align: center; /* Centrar el contenido horizontalmente */
 }
 .service__cards__item_1 img{
-    width: 100px; 
-    height: 100px; 
-    margin: 0 auto; 
-    overflow: hidden; 
-}
-
-.service__cards__item_1 img {
-    width: 100%; 
-    height: auto; 
+    width: 50px;
 }
 .service__cards__item_2{
     width: 200px; 
@@ -250,10 +241,8 @@ progress[value]::-moz-progress-bar {
 }
 
 .service__cards__item_3 img{
-    width: 100px; 
-    height: 100px; 
-    margin: 0 auto; 
-    overflow: hidden; 
+    width: 50% !important;
+    object-fit: contain; 
 }
 
 .service__cards__item_3 img {
@@ -266,8 +255,8 @@ progress[value]::-moz-progress-bar {
 }
 
 .service__cards__item_4 img{
-    width: 100px; 
-    height: 100px; 
+    width: 70px !important; 
+    height: 70px; 
     margin: 0 auto; 
     overflow: hidden; 
 }
